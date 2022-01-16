@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "icon" href ="ikonica.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Farukova štoperica</title>
+    </head>
+    <style>
+        body{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJuQw8_55Mov0evuoN9qTrvs0OU0FVdCYC1cGt0op3FpSTKe3vG0UbvLDII4oAldDJr58&usqp=CAU')
+        }
+
+        #kontejner{
+         background-color: #1f1f1f;
+         border: #f4f4f4 6px double;
+         border-radius: 50px;
+         margin-left: 37vw;
+         margin-top: -3vw;
+         width: 29vw;
+         height: 160px;
+         transition: 0.5s;
+         font-size: 7.4vw;
+        }
+          
+        #kontejner:hover{
+            font-size: 8vw;
+            margin-left: 35vw;
+            width: 30.2vw;
+         height: 9.4vw;
+        }
+
+        #Naslov{
+            font-size: 8vw;
+            font-family: Arial, Helvetica, serif;
+            font-style: oblique;
+            margin-left: 34vw;
+            margin-top: 8vw;
+            color: #2b2b2b;;
+            text-shadow: #f4f4f4 2px;
+            transition: 0.5s;
+        }
+         
+        #Naslov:hover{
+            font-size: 165px;
+            margin-left: 36vw;
+        }
+        #unutrasnjiPrikaz{
+            margin-top: 150px;
+        }
+
+        #prikaz{
+        color: rgb(255, 252, 239);
+        }
+
+        .Dugme1{
+            background-color: #2b2b2b;
+            color: rgb(255, 252, 239);
+            width: 13vw;
+            height: 70px;
+            font-size: 2.4vw;
+            font-style: italic;
+            transition: 0.4s;
+            border: #f4f4f4 7px double;
+            border-radius: 25px;
+        }
+
+        .Dugme2{
+            background-color: #2b2b2b;
+            color: rgb(255, 252, 239);
+            width: 13vw;
+            height: 70px;
+            font-size: 2.4vw;
+            font-style: italic;
+            transition: 0.4s;
+            border: #f4f4f4 7px double;
+            border-radius: 25px;
+            margin-left: 12px;
+        }
+        
+        #Dugmadi{
+            margin-left: 37.5vw;
+            margin-top: 1vw;
+        }
+        
+        .Dugme1:hover{
+            background-color: #fff7f7;
+            border: #2b2b2b 3px solid;
+            color: #2b2b2b;
+            width: 270px;
+            height: 76px;
+        }
+
+        .Dugme2:hover{
+            background-color: #fff7f7;
+            border: #2b2b2b 3px solid;
+            color: #2b2b2b;
+            width: 270px;
+            height: 76px;
+        }
+
+        @media screen and (max-width: 800px) {
+            #kontejner{
+         background-color: #1f1f1f;
+         border: #f4f4f4 6px double;
+         border-radius: 30px;
+         margin-left: 37px;
+         margin-top: -30px;
+         width: 280px;
+         height: 80px;
+         transition: 0.5s;
+         font-size: 70px;
+        }
+          
+        #kontejner:hover{
+            font-size: 8vw;
+            margin-left: 35vw;
+            width: 30.2vw;
+         height: 9.4vw;
+        }
+        
+        #Naslov{
+            font-size: 60px;
+            font-family: Arial, Helvetica, serif;
+            font-style: oblique;
+            margin-left: 45px;
+            margin-top: 8vw;
+            color: #2b2b2b;;
+            text-shadow: #f4f4f4 2px;
+            transition: 0.5s;
+        }
+         
+        #Naslov:hover{
+            font-size: 64px;
+            margin-left: 41px;
+        }
+
+        #Dugmadi{
+            margin-left: 40px;
+            margin-top: 1vw;
+        }
+        
+        .Dugme1:hover{
+            background-color: #fff7f7;
+            border: #2b2b2b 3px solid;
+            color: #2b2b2b;
+            width: 270px;
+            height: 76px;
+        }
+
+        .Dugme2:hover{
+            background-color: #fff7f7;
+            border: #2b2b2b 3px solid;
+            color: #2b2b2b;
+            width: 270px;
+            height: 76px;
+        }
+
+        .Dugme1{
+            background-color: #2b2b2b;
+            color: rgb(255, 252, 239);
+            width: 280px;
+            height: 70px;
+            font-size: 28px;
+            font-style: italic;
+            transition: 0.4s;
+            border: #f4f4f4 7px double;
+            border-radius: 25px;
+        }
+
+        .Dugme2{
+            background-color: #2b2b2b;
+            color: rgb(255, 252, 239);
+            width: 280px;
+            height: 70px;
+            font-size: 28px;
+            font-style: italic;
+            transition: 0.4s;
+            border: #f4f4f4 7px double;
+            border-radius: 25px;
+            margin-left: -0px;
+        }
+        }
+
+    </style>
+    <body>
+            <h1 id="Naslov">Štoperica</h1>
+
+            <div id="kontejner">
+                <center><div id="prikaz">00:00:00</div></center>
+            </div>
+<div id ="Dugmadi">
+    <button class = "Dugme1" id="ZapocniZaustavi" onclick="ZapocniZaustavi()">Zapocni</button>
+    <button class = "Dugme2" id="Restartuj" onclick="Restartuj()">Restartuj</button>
+</div>
+<footer>
+    <p>Autor: Balihodzic Faruk<br>
+    <a href="mailto:hege@example.com">hege@example.com</a></p>
+  </footer>
+</body>
+<script> 
+
+//Varijable koje nam označavaju sekunde, minute, sate...
+        let sekunde = 0;
+        let minute = 0;
+        let sati = 0;
+
+        //Ove varijable koristimo kako bi smo prikazali sekunde, minute, sate... 
+        let PokaziSekunde = 0;
+        let PokaziMinute = 0;
+        let PokaziSate = 0;
+
+        //Varijabla za setinterval
+
+        let interval = null;
+    
+        //Nasa funkcija koja prenosi osnovnu logiku jedne stoperice
+    function stoperica(){
+        
+        sekunde++;
+
+        if(sekunde / 60 === 1){
+            sekunde = 0;
+            minute++;
+
+             if(minute /60 === 1){
+                 minute = 0;
+                 sati++;
+             }
+        }
+
+//Kada pokrenemo websajt, nece se prikazati 01 nego 1; a mi hocemo da nam prikaze double-digit nacin, zato cemo dodati "0" na sekunde string i pridodati tu vrijednost nasim pokazivacima
+        if(sekunde < 10){
+    PokaziSekunde = "0" + sekunde.toString();
+      }
+      else{
+    PokaziSekunde = sekunde;
+    }
+
+
+    if(minute < 10){
+    PokaziMinute = "0" + minute.toString();
+}
+else{
+    PokaziMinute = minute;
+}
+
+if(sati < 10){
+    PokaziSate = "0" + sati.toString();
+}
+else{
+    PokaziSate = sati;
+}
+
+//Ovdje dole nam prikazuje vrijeme
+        document.getElementById('prikaz').innerHTML =PokaziSate + ":" + PokaziMinute + ":" + PokaziSekunde;
+    }
+
+    //Sada nam treba nova funkcija koje ce nam odredjivati kada cemo pokrenuti stopericu a kada zaustaviti
+
+    let status = "Zaustavljeno";
+
+    function ZapocniZaustavi(){
+       if(status === "Zaustavljeno"){
+           interval = window.setInterval(stoperica, 1000);     //U ovoj set interval funkciji rekli smo da nam ponavlja funkciju stoperica, svakih 1000ms = 1sekunda
+           document.getElementById("ZapocniZaustavi").innerHTML = "Zaustavi";
+           status = "Započeto";
+       }
+       else{
+           window.clearInterval(interval);
+           document.getElementById('ZapocniZaustavi').innerHTML = "Zapocni";
+           status = "Zaustavljeno";
+       }
+    }
+
+     //Funkcija za resetanje stoperice
+
+    function Restartuj(){
+        window.clearInterval(interval);
+        var sekunde = 0;
+        var minute = 0;
+        var sati = 0;
+        document.getElementById('prikaz').innerHTML = "00:00:00";
+        document.getElementById('ZapocniZaustavi').innerHTML = "Zapocni";
+    }
+
+   
+</script>
+</html>
